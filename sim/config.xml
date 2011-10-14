@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<AnalogueModels>
+		<AnalogueModel type="SimplePathlossModel">
+	    	<parameter name="alpha" type="double" value="3.0"/>
+	    	<parameter name="carrierFrequency" type="double" value="5.89e+9"/>
+	    </AnalogueModel>
+	    
+	   	<AnalogueModel type="LogNormalShadowing">
+	    	<!-- Mean attenuation in dB -->
+	    	<parameter name="mean" type="double" value="0"/>
+	    	
+	    	<!-- Standart deviation of the attenuation in dB -->
+	    	<parameter name="stdDev" type="double" value="4"/>
+	    	
+	    	<!-- Interval in which to define attenuation for in seconds -->
+	    	<parameter name="interval" type="double" value="0.001"/>
+	    </AnalogueModel>
+	    
+	</AnalogueModels>
+	
+	<Decider type="Decider80211p">
+		<!-- SNR threshold [NOT dB] 0.12589254117942 -->
+		<parameter name="threshold" type="double" value="0.12589254117942"/>
+		
+		<!-- The center frequency on whcih the phy listens-->
+		<parameter name="centerFrequency" type="double" value="5.89e+9"/>
+	</Decider>
+</root>
